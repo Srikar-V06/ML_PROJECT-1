@@ -39,6 +39,7 @@ logs to an evaluated, imbalance-aware click-probability model.
 |---|---|---|
 | Logistic Regression | 0.6121 | 0.6693 |
 | XGBoost | 0.7500 | 0.5899 |
+
 Note: `day_of_week` and `is_weekend` showed no feature importance on this
 2M-row sample — likely because the sample doesn't span multiple full weeks.
 Would need the full 40M-row dataset or a wider time slice to evaluate
