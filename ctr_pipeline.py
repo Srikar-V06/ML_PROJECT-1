@@ -108,7 +108,6 @@ print(f"Train CTR: {y_train.mean():.4f}, Test CTR: {y_test.mean():.4f}")
 #
 # `class_weight="balanced"` handles the imbalance by reweighting the loss
 # instead of resampling — keeps all the data, cheap, and a defensible default
-# to justify in an interview.
 
 # %%
 lr = LogisticRegression(max_iter=1000, class_weight="balanced", random_state=RANDOM_STATE)
@@ -191,7 +190,7 @@ print(importance)
 # %% [markdown]
 # ## 9. Notes on class imbalance handling
 #
-# Three approaches, in the order I'd reach for them:
+# Three approaches, in the order I would reach for them:
 # 1. **Class weighting** (`class_weight`/`scale_pos_weight`) — used above, no
 #    data loss, cheapest to justify.
 # 2. **Threshold tuning** — CTR models are usually consumed as ranked
@@ -203,7 +202,7 @@ print(importance)
 #    can produce nonsensical category combinations.
 
 # %% [markdown]
-# ## 10. Next steps (not implemented — scope notes for interview discussion)
+# ## 10. Next steps (not implemented)
 # - Target/frequency encoding for high-cardinality IDs (site_id, app_id)
 #   instead of label encoding, with out-of-fold computation to avoid leakage.
 # - Feature hashing for the full 40M-row dataset to control memory.
